@@ -1,0 +1,9 @@
+<h1>Your pending tickets:</h1>
+
+<ul>
+  <% @tickets.each do |ticket| %>
+    <li>
+      <%= ticket.issue_description %>
+    </li>
+  <% end %>
+</ul>

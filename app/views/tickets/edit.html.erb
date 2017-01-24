@@ -1,0 +1,17 @@
+<h1>Edit your ticket</h1>
+
+<%= form_for @ticket do |f| %>
+  <%= f.label :issue_description %>
+  <%= f.text_area :issue_description %>
+
+  <br /><br />
+  Can we enter the apartment during work hours?
+
+  <%= f.label :permission %>
+  <%= f.check_box :permission %>
+
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+
+  <br /><br />
+  <%= f.submit %>
+<% end %>
